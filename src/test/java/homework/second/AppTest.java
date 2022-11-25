@@ -1,4 +1,4 @@
-package org.example;
+package homework.second;
 
 import static org.junit.Assert.assertTrue;
 

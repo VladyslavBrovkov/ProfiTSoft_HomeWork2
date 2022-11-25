@@ -1,0 +1,51 @@
+[
+  {
+    "date_time": "2020-07-01 15:39:31",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "ALCOHOL_DRINKING",
+    "fine_amount": 550.00
+  },
+  {
+    "date_time": "2020-08-01 19:41:25",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "SPEEDING",
+    "fine_amount": 340.00
+  },
+  {
+    "date_time": "2020-05-05 16:44:22",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "ROAD_ACCIDENT",
+    "fine_amount": 400.00
+  },
+  {
+    "date_time": "2020-07-05 11:39:03",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "SPEEDING",
+    "fine_amount": 340.00
+  },
+  {
+    "date_time": "2020-08-05 20:32:03",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "ROAD_ACCIDENT",
+    "fine_amount": 400.00
+  },
+  {
+    "date_time": "2020-09-05 18:39:03",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "ALCOHOL_DRINKING",
+    "fine_amount": 550.00
+  },
+  {
+    "date_time": "2020-01-05 15:31:03",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "SPEEDING",
+    "fine_amount": 340.00
+  }
+]
