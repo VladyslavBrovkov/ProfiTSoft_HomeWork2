@@ -19,7 +19,7 @@ public class App {
         //Task 2 runs
         try {
             StatUtil.writeStatisticToFile(new File("src/main/resources/Task2Files/ViolationFiles"),
-                    new File("src/main/resources/Task2Files/ViolationStat/ViolationStat.xml"));
+                    new File("src/main/resources/Task2Files/ViolationStat.xml"));
         } catch (IOException | NullPointerException e) {
             e.printStackTrace();
         }
