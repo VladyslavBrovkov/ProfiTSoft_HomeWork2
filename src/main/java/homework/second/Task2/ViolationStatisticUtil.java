@@ -17,6 +17,12 @@ import static java.util.stream.Collectors.toList;
  */
 public class ViolationStatisticUtil {
 
+
+    /**
+     * method for calculating and writing Statistic to file
+     * @param folderIn - folder's path with all violation files in
+     * @param fileOut -  statistic file's path
+     */
     public static void writeFineStatisticToFile(File folderIn, File fileOut) throws IOException, NullPointerException {
         List<File> fileList = Arrays.stream(Objects.requireNonNull(folderIn.listFiles()))
                 .filter(f -> f.isFile() && f.getName().endsWith("_Violations.json"))
@@ -31,7 +37,10 @@ public class ViolationStatisticUtil {
         }
     }
 
-
+    /**
+     * method for calculating total Statistic
+     * @param fileList - list of violation files
+     */
     public static List<Violation> calculateTotalFine(List<File> fileList) throws IOException {
         Map<String, BigDecimal> allFilesResult = new HashMap<>();
         for (File file : fileList) {
@@ -44,7 +53,10 @@ public class ViolationStatisticUtil {
                 .collect(toList());
     }
 
-
+    /**
+     * method for parsing and calculating statistic from one File
+     * @param file - one JSON file with violation data
+     */
     public static Map<String, BigDecimal> calculateSingleJsonFile(File file) throws IOException {
         Map<String, BigDecimal> oneFileResult = new HashMap<>();
         JsonFactory jsonFactory = new JsonFactory();
@@ -67,6 +79,10 @@ public class ViolationStatisticUtil {
         return oneFileResult;
     }
 
+    /**
+     * method for parsing one Violation object in one JSON file
+     * @param jsonParser - JSON parser object
+     */
     public static Violation calculateSingleViolation(JsonParser jsonParser) throws IOException {
         if (jsonParser.currentToken() != JsonToken.START_OBJECT) {
             throw new IllegalStateException("Expected content must be an object");
