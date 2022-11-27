@@ -13,7 +13,7 @@ import java.util.*;
 import static java.util.stream.Collectors.toList;
 
 /**
- * Utility class for
+ * Utility class for violation's statistic calculation
  */
 public class ViolationStatisticUtil {
 
