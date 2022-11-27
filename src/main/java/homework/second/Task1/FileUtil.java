@@ -31,15 +31,15 @@ public class FileUtil {
     public static String modifyName(StringBuilder unmodifiedData) {
         Matcher surnameMatcher = SURNAME_PATTERN.matcher(unmodifiedData);
         Matcher nameMatcher = NAME_PATTERN.matcher(unmodifiedData);
-        String modified = unmodifiedData.toString();
+        String modifiedData = unmodifiedData.toString();
         while (surnameMatcher.find() && nameMatcher.find()) {
             String name = nameMatcher.group();
             String surname = surnameMatcher.group();
             String clearSurname = surname.substring(surname.indexOf("\"") + 1, surname.length() - 1);
             String modifiedName = name.substring(0, name.length() - 1) + " " + clearSurname + '"';
-            modified = modified.replaceAll(surnameMatcher.group(), "").replaceAll(name, modifiedName);
+            modifiedData = modifiedData.replaceAll(surnameMatcher.group(), "").replaceAll(name, modifiedName);
         }
-        return modified;
+        return modifiedData;
     }
 
 }

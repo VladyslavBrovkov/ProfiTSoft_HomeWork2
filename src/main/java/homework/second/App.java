@@ -1,7 +1,7 @@
 package homework.second;
 
 import homework.second.Task1.FileUtil;
-import homework.second.Task2.StatUtil;
+import homework.second.Task2.ViolationStatisticUtil;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,8 +18,8 @@ public class App {
         }
         //Task 2
         try {
-            StatUtil.writeStatisticToFile(new File("src/main/resources/Task2Files/ViolationFiles"),
-                    new File("src/main/resources/Task2Files/ViolationStat.xml"));
+            ViolationStatisticUtil.writeFineStatisticToFile(new File("src/main/resources/Task2Files/ViolationFiles"),
+                    new File("src/main/resources/Task2Files/violationStat.xml"));
         } catch (IOException | NullPointerException e) {
             e.printStackTrace();
         }

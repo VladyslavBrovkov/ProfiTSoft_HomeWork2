@@ -1,0 +1,15 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<TotalFine>
+  <item>
+    <type>ALCOHOL_DRINKING</type>
+    <fineAmount>4400.00</fineAmount>
+  </item>
+  <item>
+    <type>SPEEDING</type>
+    <fineAmount>4080.58</fineAmount>
+  </item>
+  <item>
+    <type>ROAD_ACCIDENT</type>
+    <fineAmount>3200.00</fineAmount>
+  </item>
+</TotalFine>

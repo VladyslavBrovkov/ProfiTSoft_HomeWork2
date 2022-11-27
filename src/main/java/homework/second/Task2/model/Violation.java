@@ -22,7 +22,7 @@ public class Violation {
         return type;
     }
 
-    public BigDecimal getFine_amount() {
+    public BigDecimal getFineAmount() {
         return fineAmount;
     }
 
