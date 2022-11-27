@@ -19,7 +19,7 @@ public class ViolationStatisticUtil {
 
 
     /**
-     * method for calculating and writing Statistic to file
+     * method for calculating and writing Statistic to file without uploading whole files to memory
      * @param folderIn - folder's path with all violation files in
      * @param fileOut -  statistic file's path
      */
