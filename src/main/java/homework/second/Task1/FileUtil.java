@@ -9,10 +9,22 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
+/**
+ * Utility class for copying files with persons' data and merging name and surname fields
+ * with input data format saving
+*/
+
 public class FileUtil {
     private static final Pattern NAME_PATTERN = Pattern.compile(" name[= ]*\"(.*?)\"");
     private static final Pattern SURNAME_PATTERN = Pattern.compile(" surname[= ]*\"(.*?)\"");
 
+
+    /**
+     * copy data from input file to output file without full file uploading to memory
+     * @param fromFilePathName - input File's path
+     * @param toFilePathName - output File's path
+     */
     public static void copyAndModifyFile(String fromFilePathName, String toFilePathName) throws IOException {
         try (Scanner sc = new Scanner(new File(fromFilePathName));
              Writer fw = new FileWriter(toFilePathName)) {
@@ -28,6 +40,12 @@ public class FileUtil {
         }
     }
 
+
+    /**
+     * modify input data with separate name and surname field to one field with merging data
+     * @param unmodifiedData - one person's input data
+     * @return String value of modified person's data
+     */
     public static String modifyName(StringBuilder unmodifiedData) {
         Matcher surnameMatcher = SURNAME_PATTERN.matcher(unmodifiedData);
         Matcher nameMatcher = NAME_PATTERN.matcher(unmodifiedData);

@@ -1,19 +1,21 @@
 package homework.second.Task2.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.math.BigDecimal;
 import java.util.Objects;
 
+/**
+ * Model class for data serialization from JSON to XML
+ */
 public class Violation {
 
-    private final String type;
+    private String type;
 
-    private final BigDecimal fineAmount;
+    private BigDecimal fineAmount;
 
+    public Violation() {
+    }
 
-    public Violation(@JsonProperty(value = "type") String type,
-                     @JsonProperty(value = "fine_amount") BigDecimal fineAmount) {
+    public Violation(String type, BigDecimal fineAmount) {
         this.type = type;
         this.fineAmount = fineAmount;
     }
@@ -24,6 +26,15 @@ public class Violation {
 
     public BigDecimal getFineAmount() {
         return fineAmount;
+    }
+
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setFineAmount(BigDecimal fineAmount) {
+        this.fineAmount = fineAmount;
     }
 
     @Override
