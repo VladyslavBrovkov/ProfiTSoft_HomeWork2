@@ -26,12 +26,12 @@ public class FileUtil {
      * @param toFilePathName - output File's path
      */
     public static void copyAndModifyFile(String fromFilePathName, String toFilePathName) throws IOException {
-        try (Scanner sc = new Scanner(new File(fromFilePathName));
+        try (Scanner sc = new Scanner(new File(fromFilePathName)).useDelimiter("");
              Writer fw = new FileWriter(toFilePathName)) {
             StringBuilder sb = new StringBuilder();
-            while (sc.hasNextLine()) {
-                sb.append(sc.nextLine()).append(System.lineSeparator());
-                if (!sb.toString().trim().endsWith("/>") && sc.hasNextLine()) {
+            while (sc.hasNext()) {
+                sb.append(sc.next());
+                if (!sb.toString().contains("/>") && sc.hasNext()) {
                     continue;
                 }
                 fw.write(modifyName(sb));
